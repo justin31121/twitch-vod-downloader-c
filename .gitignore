@@ -50,3 +50,14 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+
+*.ts
+*.mp4
+*.mp3
+*.mpg
+*.wav
+*.aiff
+*.aac
+*.m4a
+*.ogg
