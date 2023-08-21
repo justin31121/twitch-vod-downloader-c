@@ -34,6 +34,7 @@ Http_Parser_Ret get_callback(void *userdata, const char *data, size_t size) {
 
   return HTTP_PARSER_RET_CONTINUE;
 }
+
 bool parse_url(string url, string *hostname, string *route) {
   if(string_index_of(url, "https://") != 0) {
     return false;
@@ -158,6 +159,7 @@ bool index_formats(string content, int index, string *out) {
   
   return true;
 }
+
 bool m3u8_init(Region *region, string m3u8_url, M3u8* m) {
 
   string hostname, route;
@@ -201,6 +203,7 @@ bool m3u8_init(Region *region, string m3u8_url, M3u8* m) {
 
   return true;
 }
+
 bool m3u8_next(M3u8 *m, string *url) {
 
   //printf( str_fmt, str_arg(m->content) );
@@ -287,6 +290,7 @@ typedef struct{
   string signature;
   string value;
 }Twitch_Gql;
+
 bool on_elem(Json_Parser_Type type, const char *content, size_t content_size, void *arg, void **elem) {
   (void) elem;
   Twitch_Gql *g = arg;
